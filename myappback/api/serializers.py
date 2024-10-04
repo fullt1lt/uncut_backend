@@ -18,13 +18,14 @@ class CategoryActivitySerializer(serializers.ModelSerializer):
         
 class DoctorSerializer(serializers.ModelSerializer):
     photo = serializers.ImageField(required=False)
+    photo_small = serializers.ImageField(required=False)
     image_info = serializers.ImageField(required=False)
 
     class Meta:
         model = Doctors
         fields = [
             'id', 'specialization_en', 'specialization_uk', 'name_en', 'name_uk', 'about_myself_en', 'about_myself_uk',
-            'photo', 'information_en', 'information_uk', 'image_info', 'specialty_en', 'specialty_uk', 'education_en',
+            'photo','photo_small', 'information_en', 'information_uk', 'image_info', 'specialty_en', 'specialty_uk', 'education_en',
             'education_uk', 'experience_en', 'experience_uk', 'work_method_en', 'work_method_uk', 'work_directions_en',
             'work_directions_uk', 'skills_en', 'skills_uk', 'professional_development_en', 'professional_development_uk',
             'additional_professional_activity_en', 'additional_professional_activity_uk'

@@ -20,6 +20,7 @@ class Doctors(models.Model):
     name = models.CharField(max_length=50)
     about_myself = models.TextField(max_length=255)
     photo = models.ImageField(upload_to='doctors/photos/', blank=True, null=True)
+    photo_small = models.ImageField(upload_to='doctors/photos/', blank=True, null=True)
     information = models.TextField(max_length=255)
     image_info = models.ImageField(upload_to='doctors/image/', blank=True, null=True)
     specialty = models.TextField(max_length=255, default="Доктор")
